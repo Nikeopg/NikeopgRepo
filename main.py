@@ -5,6 +5,6 @@
 # Сейчас 13.02 заканчиваю второй - https://stepik.org/course/67/syllabus
 
 # План: пройти ООП на степике + пандас по ютубчику + потанцевать DJANGO
+import time
 
-print("Hello OPG_TEAM!")
-
+print("Hello OPG_TEAM!", time.localtime(), sep="\n")
