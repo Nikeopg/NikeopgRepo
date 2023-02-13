@@ -1,21 +1,24 @@
-
 games_amount = int(input())
 team = []
 
 table = []
 teams = {}
-points = 0
-match_amount = 0
-wp = 0
-draw = 0
-gg = 0
+points, match_amount, wp, draw, gg = 0, 0, 0, 0, 0
 
 cnter = 0
-while cnter <= games_amount:
+
+while cnter < games_amount:
     match = str(input())
-    table.append(match)
+    table.append(match.split(";"))
+    cnter += 1
 
+print(table)
 
+for i in range(len(table)):
+    teams[table[i][0]] = [match_amount,wp, draw, gg, points]
+    teams[table[i][2]] = [match_amount, wp, draw, gg, points]
+
+print(teams)
 
 """ Напишите программу, которая принимает на стандартный вход список игр футбольных команд
 с результатом матча и выводит на стандартный вывод сводную таблицу результатов всех матчей.
