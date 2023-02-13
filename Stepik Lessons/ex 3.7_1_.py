@@ -36,10 +36,10 @@ for i in range(len((table))):
         teams[table[i][0]][4] += 1
         teams[table[i][2]][0] += 1
         teams[table[i][2]][2] += 1
-        teams[table[i][2]][4] += 3
+        teams[table[i][2]][4] += 1
 
 for club, res in teams.items():
-    print(club, *res)
+    print(club + ":" + ' '.join(list(map(str,res))))
 
 """ Напишите программу, которая принимает на стандартный вход список игр футбольных команд
 с результатом матча и выводит на стандартный вывод сводную таблицу результатов всех матчей.
