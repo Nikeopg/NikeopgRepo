@@ -1,17 +1,13 @@
+from collections import Counter
+import time
+start = time.time() ## точка отсчета времени
 def find_it(seq):
-    d = {}
-    for i in seq:
-        if i not in d:
-            d[i] = 1
-        else:
-            d[i] += 1
-
-    for k,v in d.items():
-        if v % 2 != 0:
-            return k
-
+    return [k for k, v in Counter(seq).items() if v % 2 != 0][0]
 
 print(find_it([1,2,2,3,3,3,4,3,3,3,2,2,1]))
+end = time.time() - start ## собственно время работы программы
+
+print(end) ## вывод времени
 """"
 ________________________________________________________________
 Given an array of integers, find the one that appears an odd number of times.
