@@ -1,6 +1,5 @@
 def sort_array(seq):
     odd = [i for i in seq if i % 2 != 0]
-    even = [i for i in seq if i % 2 == 0]
     odd.sort()
 
     for j in range(len(seq)):
